@@ -17,3 +17,7 @@ body {
   padding: 20px;
   word-break: break-word;
 }
+
+.section {
+  margin: 10px 0;
+}
