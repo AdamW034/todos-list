@@ -1,0 +1,26 @@
+.section__buttons {
+    color: teal;
+    background-color: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+    .section__buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    };
+}
+
+.section__buttons:hover {
+    color: rgb(0, 146, 146);
+    transform: scale(1.1);
+}
+
+.section__buttons:active {
+    color: rgb(0, 165, 165);
+}
+
+.section__buttons:disabled {
+    color: grey;
+}
