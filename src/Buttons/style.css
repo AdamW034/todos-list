@@ -9,7 +9,9 @@
     .section__buttons {
         display: grid;
         grid-template-columns: 1fr;
-    };
+    }
+
+    ;
 }
 
 .section__buttons:hover {
@@ -23,4 +25,5 @@
 
 .section__buttons:disabled {
     color: grey;
+    transform: none;
 }

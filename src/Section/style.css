@@ -1,0 +1,26 @@
+.section {
+    margin: 10px 0;
+  }
+  
+  .section__container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px solid rgb(236, 234, 234);
+  }
+  
+  .section__header {
+    margin: 0;
+  }
+  
+  .section__container--toggleTasksDone {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  
+  @media (max-width: 767px) {
+    .section__container--toggleTasksDone {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    };
+  }
