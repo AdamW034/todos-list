@@ -5,7 +5,7 @@ import Section from './Section';
 import Form from './Form';
 
 const tasks = [
-  { id: 1, content: "Task 1", done: true },
+  { id: 1, content: "Task 1", done: false },
   { id: 2, content: "Task2", done: true },
 ];
 

@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css'
 
 const Section = ({title, body, extraHeaderContent}) => (
     <section className="section">
