@@ -1,16 +1,27 @@
 import React from 'react';
 import './style.css';
 
-const Buttons = (props) => {
+const Buttons = ({tasks, hideDone, toggleHideDone}) => {
 
-    if (props.tasks.length === 0) {
+    if (tasks.length === 0) {
         return null
     };
 
     return (
         <div className="buttons">
-            <button className="section__buttons">{props.hideDoneTasks ? "Pokaż" : "Ukryj"} zakończone</button>
-            <button className="section__buttons" disabled={props.tasks.every(({done}) => done)}>Ukończ wszystkie</button>
+            <button 
+            className="section__buttons"
+            onClick={toggleHideDone}
+            >
+                {hideDone ? "Pokaż" : "Ukryj"} zakończone
+            </button>
+            <button 
+            className="section__buttons" 
+            disabled={tasks.every(({done}) => done)}
+            onClick={toggleHideDone}
+            >
+                Ukończ wszystkie
+            </button>
         </div>
     )
 };

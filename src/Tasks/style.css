@@ -55,3 +55,7 @@
 .section__buttonRemove:active {
     background-color: rgb(255, 62, 62);
 }
+
+.section__listItem--hidden {
+    display: none;
+}
