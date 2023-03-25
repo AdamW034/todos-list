@@ -7,7 +7,9 @@ const Tasks = (props) => (
             <li
             className={`section__listItem ${task.done && props.hideDone ? "section__listItem--hidden" : ""}`}>
                 <button
-                className="section__buttonDone js-done">
+                className="section__buttonDone js-done"
+                onClick={ () => props.toggleTaskDone(task.id)}
+                >
                     {task.done ? "✔" : ""}
                 </button>
                 <span
