@@ -15,7 +15,9 @@ const Tasks = (props) => (
                     {task.content}
                 </span>
                 <button
-                className="section__buttonRemove js-remove">
+                className="section__buttonRemove js-remove"
+                onClick={ () => props.removeTask(task.id)}
+                >
                     🗑
                 </button>
             </li>
