@@ -24,6 +24,6 @@
 }
 
 .section__buttons:disabled {
-    color: grey;
+    color: rgb(184, 184, 184);
     transform: none;
 }
