@@ -12,9 +12,10 @@ const Tasks = (props) => (
                 >
                     {task.done ? "✔" : ""}
                 </button>
+                
                 <span
                 className={`${task.done ? "section__listItem--done" : ""}`}>
-                    {task.content}
+                    {task.id} - {task.content}
                 </span>
                 <button
                 className="section__buttonRemove js-remove"
