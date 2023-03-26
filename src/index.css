@@ -11,10 +11,3 @@ body {
   background-color: rgb(236, 234, 234);
 } 
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  word-break: break-word;
-}
-

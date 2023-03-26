@@ -2,7 +2,7 @@
 [![Zrzut-do-README.png](https://i.postimg.cc/Tw6ytGC9/Zrzut-do-README.png)](https://postimg.cc/7CKY6vvG)
 ## I'm happy to present you the "Tasks list" project. The project has been made in order to fulfill a homework assigned in "Frontend Developer od podstaw" programming course.
 ## Technologies used in the project: ES6, CSS, Grid, BEM, Normalize CSS, HMTL, GIT.
-## [DEMO]
+## [DEMO](https://adamw034.github.io/todos-list/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
