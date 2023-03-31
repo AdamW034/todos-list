@@ -1,7 +1,12 @@
 import React from 'react';
 import './style.css'
 
-const Tasks = (props) => (
+const Tasks = (props) => {
+    if (props.tasks.length === 0) {
+        return null
+    };
+    
+    return (
     <ul className="section__list js-list">
         {props.tasks.map(task => (
             <li
@@ -25,7 +30,8 @@ const Tasks = (props) => (
                 </button>
             </li>
         ))}
-    </ul>
-);
+    </ul>)
+    
+};
 
 export default Tasks;
