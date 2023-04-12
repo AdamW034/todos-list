@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import { Button } from './styled';
 
 const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => {
 
@@ -8,20 +8,18 @@ const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => {
     };
 
     return (
-        <div className="buttons">
-            <button 
-            className="section__buttons"
+        <div>
+            <Button
             onClick={toggleHideDone}
             >
                 {hideDone ? "Pokaż" : "Ukryj"} zakończone
-            </button>
-            <button 
-            className="section__buttons" 
+            </Button>
+            <Button 
             disabled={tasks.every(({done}) => done)}
             onClick={setAllDone}
             >
                 Ukończ wszystkie
-            </button>
+            </Button>
         </div>
     )
 };
