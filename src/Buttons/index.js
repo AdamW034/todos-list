@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './styled';
+import { Button, ButtonsContainer } from './styled';
 
 const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => {
 
@@ -8,7 +8,7 @@ const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => {
     };
 
     return (
-        <div>
+        <ButtonsContainer>
             <Button
             onClick={toggleHideDone}
             >
@@ -20,7 +20,7 @@ const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => {
             >
                 Ukończ wszystkie
             </Button>
-        </div>
+        </ButtonsContainer>
     )
 };
 
