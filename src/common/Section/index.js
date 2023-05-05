@@ -3,7 +3,7 @@ import { StyledSection, StyledDiv, StyledH2 } from "./styled";
 
 const Section = ({title, body, extraHeaderContent}) => (
     <StyledSection>
-        <StyledDiv toggleTaskDone>
+        <StyledDiv >
           <StyledH2>{title}</StyledH2>
           {extraHeaderContent}
         </StyledDiv>
