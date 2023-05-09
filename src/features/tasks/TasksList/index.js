@@ -1,20 +1,26 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { StyledUl, StyledLi, RemoveButton, ToggleDoneButton, TaskContent } from './styled';
+import { selectTasks } from '../tasksSlice';
+import { toggleTaskDone, removeTask } from '../tasksSlice';
+const TasksList = () => {
 
-const TasksList = (props) => {
-    if (props.tasks.length === 0) {
+    const {tasks, hideDone} = useSelector(selectTasks);
+    const dispatch = useDispatch()
+
+    if (tasks.length === 0) {
         return null
     };
 
     return (
         <StyledUl>
-            {props.tasks.map(task => (
+            {tasks.map(task => (
                 <StyledLi
                     key={task.id}
-                    hidden={task.done && props.hideDone}
+                    hidden={task.done && hideDone}
                 >
                     <ToggleDoneButton
-                        onClick={() => props.toggleTaskDone(task.id)}
+                        onClick={() => dispatch(toggleTaskDone(task.id))}
                     >
                         {task.done ? "✔" : ""}
                     </ToggleDoneButton>
@@ -22,10 +28,10 @@ const TasksList = (props) => {
                     <TaskContent
                         done={task.done}
                     >
-                        {task.id} - {task.content}
+                      {task.content}
                     </TaskContent>
                     <RemoveButton
-                        onClick={() => props.removeTask(task.id)}
+                        onClick={() => dispatch(removeTask(task.id))}
                     >
                         🗑
                     </RemoveButton>
