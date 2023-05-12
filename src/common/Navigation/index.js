@@ -1,13 +1,9 @@
-import { StyledHead, StyledNav, Navigation, Link } from "./styled";
+import { StyledHead, StyledNav, NavigationUl, LinksLi } from "./styled";
+import { Link } from "react-router-dom";
 
-const PageHeader = () => (
+const PageHeader = ({children}) => (
   <StyledHead>
-    <StyledNav>
-      <Navigation>
-        <Link>Zadania</Link>
-        <Link>O autorze</Link>
-      </Navigation>
-    </StyledNav>
+    {children}
   </StyledHead>
 );
 
