@@ -5,13 +5,12 @@ import Form from './Form';
 import HeaderButton from './headerButton'
 import Container from '../../common/Container';
 import TasksList from './TasksList';
-import PageHeader from '../../common/Navigation';
+import SearchInput from './Input';
 
 function Tasks() {
 
   return (
     <>
-      <PageHeader />
       <Container>
         <Header
           title="Lista zadań"
@@ -20,6 +19,10 @@ function Tasks() {
           title="Dodaj nowe zadanie"
           body={<Form />}
           extraHeaderContent={<HeaderButton />}
+        />
+        <Section
+          title="Wyszukaj zadanie"
+          body={<SearchInput />}
         />
         <Section
           title="Lista zadań"

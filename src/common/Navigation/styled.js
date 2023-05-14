@@ -20,6 +20,7 @@ export const NavigationUl = styled.ul`
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
+  color: white;
 `;
 
 export const LinksLi = styled.li`
