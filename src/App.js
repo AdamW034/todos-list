@@ -1,6 +1,7 @@
 import { HashRouter, NavLink, Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
-import Author from "./features/author";
+import AuthorPage from "./features/author";
 import PageHeader from "./common/Navigation";
+import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
 import { LinksLi, NavigationUl, StyledNav } from "./common/Navigation/styled";
 
@@ -17,11 +18,14 @@ const App = () => (
       </StyledNav>
     </PageHeader>
     <Switch>
+      <Route path="/zadania/:id">
+        <TaskPage />
+      </Route>
       <Route path="/zadania">
         <TasksPage />
       </Route>
       <Route path="/author">
-        <Author />
+        <AuthorPage />
       </Route>
       <Route path="/">
       </Route>

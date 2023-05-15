@@ -3,7 +3,7 @@ import Header from "../../common/Header";
 import Section from "../../common/Section";
 import AboutAuthor from "./author";
 
-const Author = () => (
+const AuthorPage = () => (
   <Container>
     <Header
       title="O autorze"
@@ -15,4 +15,4 @@ const Author = () => (
   </Container>
 );
 
-export default Author;
+export default AuthorPage;
