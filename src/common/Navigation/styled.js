@@ -16,7 +16,7 @@ export const NavigationUl = styled.ul`
   padding: 0 40% 0 40%;
   display: grid;
   margin: 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
