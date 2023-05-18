@@ -1,9 +1,9 @@
-import { HashRouter, NavLink, Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import AuthorPage from "./features/author";
 import PageHeader from "./common/Navigation";
 import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
-import { LinksLi, NavigationUl, StyledNav } from "./common/Navigation/styled";
+import { LinksLi, NavigationUl, StyledNav, StyledNavLink } from "./common/Navigation/styled";
 
 
 
@@ -12,8 +12,8 @@ const App = () => (
     <PageHeader>
       <StyledNav>
         <NavigationUl>
-          <LinksLi><NavLink to="/zadania" activeClassName = "active" className = "link">Zadania</NavLink></LinksLi>
-          <LinksLi><NavLink to="/author" activeClassName = "active" className = "link">O autorze</NavLink></LinksLi>
+          <LinksLi><StyledNavLink to="/zadania" activeClassName = "active" className = "link">Zadania</StyledNavLink></LinksLi>
+          <LinksLi><StyledNavLink to="/author" activeClassName = "active" className = "link">O autorze</StyledNavLink></LinksLi>
         </NavigationUl>
       </StyledNav>
     </PageHeader>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SearchDiv } from "../tasks/TasksPage/Input/styled";
+import { SearchDiv } from "../tasks/TasksPage/Search/styled";
 
 export const About = styled(SearchDiv)`
     grid-template-rows: 1fr auto;

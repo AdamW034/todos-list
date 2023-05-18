@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom"
 
 export const StyledHead = styled.header`
   margin: 0;
@@ -31,7 +32,12 @@ export const LinksLi = styled.li`
     transform: scale(1.1);
   }
 
-  &:active {
+  
+`;
+
+export const StyledNavLink = styled(NavLink)`
+
+  &.active {
     transform: scale(1.1);
     font-weight: 600;
   }
