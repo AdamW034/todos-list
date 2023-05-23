@@ -36,7 +36,9 @@ export const LinksLi = styled.li`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-
+  text-decoration: none;
+  color: white;
+  
   &.active {
     transform: scale(1.1);
     font-weight: 600;
