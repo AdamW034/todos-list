@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { StyledUl, StyledLi, RemoveButton, ToggleDoneButton, TaskContent } from './styled';
+import { StyledUl, StyledLi, RemoveButton, ToggleDoneButton, TaskContent, StyledLink } from './styled';
 import { toggleTaskDone, removeTask, selectTasksByQuery } from '../../tasksSlice';
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const TasksList = () => {
     const location = useLocation();
@@ -10,7 +10,7 @@ const TasksList = () => {
 
 
     const { tasks, hideDone } = useSelector(state => selectTasksByQuery(state, query));
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     if (tasks.length === 0) {
         return null
@@ -32,7 +32,7 @@ const TasksList = () => {
                     <TaskContent
                         done={task.done}
                     >
-                        <Link to={`/zadania/${task.id}`}>{task.content}</Link>
+                        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
                     </TaskContent>
                     <RemoveButton
                         onClick={() => dispatch(removeTask(task.id))}

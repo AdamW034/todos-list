@@ -1,18 +1,24 @@
 import { Button } from "./buttonsStyling";
-import { useDispatch } from "react-redux";
-import { fetchExampleTasks } from "./tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchExampleTasks, selectLoading } from "./tasksSlice";
 
 
 
 const HeaderButton = () => {
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const loading = useSelector(selectLoading);
 
   return (
     <Button
+      disabled={loading}
       onClick={() => dispatch(fetchExampleTasks())}
     >
-      Pobierz przykładowe zadania
+      {
+        loading
+          ? "Ładowanie..."
+          : "Pobierz przykładowe zadania"
+      }
     </Button>
   )
 };

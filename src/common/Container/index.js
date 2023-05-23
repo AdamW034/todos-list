@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledMain } from "./styled";
 
 const Container = ({children}) => (
